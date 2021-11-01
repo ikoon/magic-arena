@@ -1,0 +1,186 @@
+@charset "utf-8"; 
+
+/* @ RESET CSS */ 
+html, body, div, p, span, strong, b, em, iframe, pre, 
+h1, h2, h3, h4, h5, h6, 
+img, dl, dt, dd, 
+fieldset, form, legend, label, 
+table, caption, thead, tbody, tfoot, tr, th, td, 
+ul, ol, li, a, input, select, textarea {margin: 0;padding: 0; border: 0 none; } 
+
+body {font-family:'NanumBarunGothic', 굴림, MalgunGothic, '맑은 고딕','돋움', Dotum, AppleGothic, Sans-serif, Arial; font-size:12%; line-height: 1.5;color: #333;} 
+
+ul, ol, li {list-style: none;} 
+em, address {font-style: normal;} 
+img {border: 0 none; font-size: 0;line-height: 0;} 
+sup {position: relative;top: 2px;font-size: 12px;line-height: 100%;} 
+table {border-collapse: collapse; border-spacing:0; } 
+caption {overflow: hidden;width: 0;height: 0;font-size: 0; line-height: 0;} 
+th, td { vertical-align: middle;/* white-space: nowrap */} 
+a {color: #333; text-decoration: none; line-height: 1.5;} 
+a:hover, a:focus, a:active {color: #333; text-decoration: none;} 
+a:visited {color: #333;} 
+*, html {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; } 
+*, *:before, *:after {box-sizing: border-box;-webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+
+/* common ******************/
+header, section, nav, article, footer { display: block; text-align:left;}
+*:focus {outline:none;}
+* {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+.header {
+    position: fixed;
+    width: 8.421%;
+    top: 1.5%;
+    left: 5.157%;
+    z-index: 11;
+}
+.header img {width: 100%;}
+
+/* full background ******************/
+.fp-bg{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+.fp-section.fp-table, .fp-slide.fp-table{
+  overflow: hidden;
+}
+.fp-tableCell{
+    position: relative;
+}
+.fp-bg{
+    -webkit-transition: transform 1000ms ease;
+    -moz-transition: transform 1000ms ease;
+    -ms-transition: transform 1000ms ease;
+    -o-transition: transform 1000ms ease;
+    transition: transform 1000ms ease;
+}
+/* .section-info{
+    position: relative;
+
+} */
+.section{
+    text-align: center;
+    overflow: hidden;
+}
+.section img {width: 100%;}
+
+
+/* main ******************/
+.main-sect1 {
+    overflow: hidden;
+}
+.main-bg2{
+    background-image: url(../images/bg_main2.jpg);
+}
+.main-bg3{
+    background-image: url(../images/bg_main3.jpg);
+}
+
+
+#introVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    background-image: /* our video */;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+}
+
+video::-webkit-media-controls {
+    display:none !important;
+}
+
+.main-menu {position:fixed; top: 20%; right: 79px; z-index:10;}
+.main-menu a {display: block; width: 206px; height: 68px; background-position: center; background-repeat: no-repeat; font-size:0; line-height: 0;}
+.main-menu .m1 a {background-image: url(../images/main_m1.png);}
+.main-menu .m2 a {background-image: url(../images/main_m2.png);}
+.main-menu .m3 a {background-image: url(../images/main_m3.png);}
+.main-menu .m4 a {background-image: url(../images/main_m4.png);}
+.main-menu .m5 a {background-image: url(../images/main_m5.png);}
+.main-menu .m1.active a {background-image: url(../images/main_m1_on.png);}
+.main-menu .m2.active a {background-image: url(../images/main_m2_on.png);}
+.main-menu .m3.active a {background-image: url(../images/main_m3_on.png);}
+.main-menu .m4.active a {background-image: url(../images/main_m4_on.png);}
+.main-menu .m5.active a {background-image: url(../images/main_m5_on.png);}
+
+.sect1 .section-info {
+    position: absolute;
+    top: 60%;
+    left: 5.105%;
+    width: 24%;
+    z-index:2;
+}
+.sect2 .section-info {
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.sect2 .section-info .txt {
+    position: absolute;
+    margin-top: 4%;
+    left: 50%;
+    width: 55%;
+    margin-left: -27.5%;
+    z-index:2;
+}
+.sect2 .section-info .btn {
+    position: absolute;
+    margin-top: 44%;
+    left: 50%;
+    width: 12.263%;
+    margin-left: -6.231%;
+    z-index:2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
