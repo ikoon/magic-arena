@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <title>BURGERKING</title>
+	<link rel="stylesheet" href="./css/jquery.fullpage.css">
+	<link rel="stylesheet" href="./css/common.css">
+
+</head>
+<body>
+
+<!-- WRAP -->
+<header class="header">
+    <div class="arena-logo"><img src="./images/logo_arena.png" alt="MAGIC THE GATHERING ARENA" /></div>
+</header>
+<ul id="menu" class="main-menu">
+    <!-- <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li> -->
+    <li data-menuanchor="download" class="m1 active"><a href="#download">다운로드</a></li>
+    <li data-menuanchor="infomation" class="m2"><a href="#infomation">매직정보</a></li>
+    <li class="m3"><a href="">신규세트 및 프로모션</a></li>
+    <li data-menuanchor="how-to-play" class="m4"><a href="#how-to-play">게임방법</a></li>
+    <li class="m5"><a href="#">SNS채널보기</a></li>
+</ul>
+
+<div class="page-container">
+    <div id="fullpage">
+
+        <!-- SECTION 1-->
+        <div class="section sect1">
+            <div class="fp-bg">
+                <video id="introVideo" loop muted data-autoplay>
+                    <source src="./movie/movie_01.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="section-info">
+                <div class="txt"><img src="./images/main_txt.png" alt="진정한 전략, 진정한 도전 트레이딩 카드 게임의 원조" /></div>
+                <div class="btn"><a href=""><img src="./images/btn_play.png" alt="지금 플레이하세요" /></a></div>
+            </div>
+        </div>
+
+        <!-- SECTION 2-->
+        <div class="section sect2">
+            <div class="fp-bg main-bg2"></div>
+            <div class="section-info">
+                <div class="txt"><img src="./images/main_txt2.png" alt="" /></div>
+                <div class="btn"><a href=""><img src="./images/btn_new_set.png" alt="신규 세트 보러 가기" /></a></div>
+
+            </div>
+        </div>
+
+        <!-- SECTION 3-->
+        <div class="section sect3">
+            <div class="fp-bg main-bg3"></div>
+            <div class="section-info">Slide 3.1</div>
+        </div>
+    </div>
+  </div>
+
+
+<!-- <div id="fullpage">
+	<section class="section main-sect1">
+		<video id="introVideo" loop muted data-autoplay>
+			<source src="./movie/movie_01.mp4" type="video/mp4">
+		</video>
+		<div class="layer">
+			<h1>fullPage.js videos</h1>
+		</div>
+	</section>
+	<section class="section">
+        <div class="main-bg2">
+            <div class="slide" id="slide1"><h1>Slide Backgrounds</h1></div>
+            <div class="slide" id="slide2"><h1>Totally customizable</h1></div>
+        </div>
+	</section>
+	<section class="section">
+        <div class="main-bg3">
+            <h1>Lovely images <br />for a lovely page</h1>
+        </div>
+    </section>
+	<section class="section" id="section3"><h1>One Image = One thousand words</h1></section>
+</div> -->
+<!-- // WRAP -->
+
+
+
+
+
+
+
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- <script src="./js/jquery.fullpage.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.js"></script>
+<!-- <script src="./js/jquery-ui.min.js"></script>
+<script src="./js/swiper.min.js"></script> -->
+
+<script src="./js/common.js"></script>
+
+<script>
+//    $(document).ready(function() {
+//         $('#fullpage').fullpage({
+//             verticalCentered: true,
+//             sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+//             css3:false
+//         });
+//     });
+
+$(function () {
+    $('#fullpage').fullpage({
+        licenseKey:'OPEN-SOURCE-GPLV3-LICENSE',
+        scrollingSpeed: 1000,
+        fitToSection: true,
+        loopHorizontal:false,
+        anchors: ['download', 'infomation', 'how-to-play'],
+        menu: '#menu',
+        afterRender: function () {
+        $('.fp-bg').each(function (index,item) {
+            $(item).attr('data-offy',$(item).height()*0.6);
+            $(item).attr('data-offx',$(item).width()*0.6);
+        })
+        },
+        afterResize: function () {
+        $('.fp-bg').each(function (index,item) {
+            $(item).attr('data-offy',$(item).height()*0.6);
+            $(item).attr('data-offx',$(item).width()*0.6);
+        })
+        },
+        onLeave: function(origin, destination, direction){
+        if(direction == 'down'){
+            var y = $(origin.item).find('.fp-bg').attr('data-offy') || 0;
+            $(origin.item).find('.fp-bg').css('transform','translateY('+y+'px)');
+        } else {
+            $(destination.item).find('.fp-bg').css('transform','translateY(0px)');
+        }
+        },
+        /* onSlideLeave: function (section, origin, destination, direction) {
+        if(direction == 'right') {
+
+            var x = $(origin.item).find('.fp-bg').attr('data-offx') || 0;
+            $(origin.item).find('.fp-bg').css('transform','translateX('+x+'px)');
+
+        } else {
+            $(destination.item).find('.fp-bg').css('transform','translateX(0px)');
+        }
+        }*/
+    });
+});
+</script> 
+</body>
+</html>
