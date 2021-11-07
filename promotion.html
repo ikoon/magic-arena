@@ -14,10 +14,10 @@
 <!-- HEADER -->
 <header>
     <div class="header-top clearfix">
-        <h1 class="l-left">
-            <a href="#download"><!-- logo link -->
-                <img src="./images/logo_arena.png" class="img-p" alt="MAGIC THE GATHERING ARENA" />
-                <img src="./images/logo_arena_m.png" class="img-m" alt="MAGIC THE GATHERING ARENA" />
+        <h1 class="l-left logo-magic">
+            <a href="#promotion"><!-- logo link -->
+                <img src="./images/logo_magic.png" class="img-p" alt="MAGIC THE GATHERING" />
+                <img src="./images/logo_magic_m.png" class="img-m" alt="MAGIC THE GATHERING" />
             </a>
         </h1>
         <a class="l-right toggle-menu" href="#">
@@ -25,11 +25,11 @@
         </a>
     </div>
     <nav class="hide"> <!-- menu -->
-        <ul id="menu" class="main-menu">
-            <li data-menuanchor="download" class="m1 active"><a href="#download">다운로드</a></li>
-            <li data-menuanchor="infomation" class="m2"><a href="#infomation">매직정보</a></li>
-            <li class="m3"><a href="https://www.mtgkorea.co.kr/promotion/" target="_blank">신규세트 및 프로모션</a></li>
-            <li data-menuanchor="how-to-play" class="m4"><a href="#how-to-play">게임방법</a></li>
+        <ul id="menu" class="main-menu promo">
+            <li data-menuanchor="promotion" class="m1 active"><a href="#promotion">환영 부스터 이벤트</a></li>
+            <li data-menuanchor="welcome-promotion" class="m2"><a href="#welcome-promotion">매직 웰컴 프로모션</a></li>
+            <li class="m3"><a href="https://www.mtgkorea.co.kr/produsts_store" target="_blank">신제품 및 스토어 보러가기</a></li>
+            <li class="m4"><a href="https://www.mtgkorea.co.kr/main/">아레나 다운로드</a></li>
             <li class="m5"><a href="#sns-popup" class="btn-sns">SNS채널보기</a></li>
         </ul>
     </nav>
@@ -37,73 +37,38 @@
 <!--// HEADER -->
 
 <div class="page-container">
-    <div id="mainFullpage">
+    <div id="promotionFullpage">
 
-        <!-- 다운로드 -->
-        <div class="section sect1">
-            <div class="fp-bg">
-                <video id="introVideo" loop muted data-autoplay>
-                    <source src="./movie/movie_01.mp4" type="video/mp4">
-                </video>
-            </div>
+        <!-- 환영부스터 이벤트 -->
+        <div class="section prosect1">
+            <div class="fp-bg promotion-bg1"></div>
             <div class="section-info">
                 <div class="txt">
-                    <img src="./images/main_txt.png" class="img-p" alt="진정한 전략, 진정한 도전 트레이딩 카드 게임의 원조" />
-                    <img src="./images/main_txt_m.png" class="img-m" alt="진정한 전략, 진정한 도전 트레이딩 카드 게임의 원조" />
-                </div>
-                <div class="btn">
-                    <a href="https://app.adjust.com/jmvqs5k" target="_blank">
-                        <img src="./images/btn_play.png" class="img-p" alt="지금 플레이하세요" />
-                        <img src="./images/btn_play_m.png" class="img-m" alt="지금 플레이하세요" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 매직정보 -->
-        <div class="section sect2">
-            <div class="fp-bg main-bg2"></div>
-            <div class="section-info">
-                <div class="txt">
-                    <img src="./images/main_txt2.png" class="img-p" alt="" />
-                    <img src="./images/main_txt2_m.png" class="img-m" alt="" />
+                    <img src="./images/pro_txt1.png" class="img-p" alt="환영 부스터로 시작하자" />
+                    <img src="./images/pro_txt1_m.png" class="img-m" alt="환영 부스터로 시작하자" />
                 </div>
                 <div class="btn">
                     <a href="https://www.mtgkorea.co.kr/produsts_store" target="_blank">
-                        <img src="./images/btn_new_set.png" class="img-p" alt="신규 세트 보러 가기" />
-                        <img src="./images/btn_new_set_m.png" class="img-m" alt="신규 세트 보러 가기" />
+                        <img src="./images/btn_set_view.png" class="img-p" alt="신규 세트 보러가기" />
+                        <img src="./images/btn_set_view_m.png" class="img-m" alt="신규 세트 보러가기" />
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- 게임방법 -->
-        <div class="section sect3">
-            <div class="main-bg3"></div>
-            <div id="cf">
-                <div class="cf">
-                    <div class="tit"><img src="./images/cf_tit.png" alt=""></div>
-                    <div class="area_movie">
-                        <ul class="tab_mv">
-                            <li class="on" data-src="https://www.youtube.com/embed/LEAhIATEP_g?rel=0&showinfo=0"><a href="javascript:void(0);"><span class="visuallyhidden">TV CF 보기</span></a></li>
-                            <li data-src="https://www.youtube.com/embed/7NDuUs5rgGA?rel=0&showinfo=0"><a href="javascript:void(0);"><span class="visuallyhidden">메이킹 필름</span></a></li>
-                            <li data-src="https://www.youtube.com/embed/bC0-ATmfxN4?rel=0&showinfo=0"><a href="javascript:void(0);"><span class="visuallyhidden">메이킹 필름</span></a></li>
-                        </ul>
-                        <ul class="con_mv">
-                            <li class="on"><div class="wrap_movie">
-                                <!-- <iframe id="player1" src="https://www.youtube.com/embed/LEAhIATEP_g?rel=0&showinfo=0" frameborder="0"></iframe> -->
-                                <div id="player1"></div>
-                            </div></li>
-                            <li><div class="wrap_movie">
-                                    <!-- <iframe id="player2" src="https://www.youtube.com/embed/7NDuUs5rgGA?rel=0&showinfo=0" frameborder="0"></iframe> -->
-                                <div id="player2" ></div>
-                            </div></li>
-                            <li><div class="wrap_movie">
-                                <!-- <iframe id="player3" src="https://www.youtube.com/embed/bC0-ATmfxN4?rel=0&showinfo=0" frameborder="0"></iframe> -->
-                                <div id="player3" ></div>
-                            </div></li>
-                        </ul>
-                    </div>
+        <!-- 웰컴 매직 프로모션 -->
+        <div class="section prosect2">
+            <div class="fp-bg promotion-bg2"></div>
+            <div class="section-info">
+                <div class="txt">
+                    <img src="./images/pro_txt2.png" class="img-p" alt="" />
+                    <img src="./images/pro_txt2_m.png" class="img-m" alt="" />
+                </div>
+                <div class="btn">
+                    <a href="https://locator.wizards.com/" target="_blank">
+                        <img src="./images/btn_product_store.png" class="img-p" alt="오프라인 매장 확인하기" />
+                        <img src="./images/btn_product_store.png" class="img-m" alt="오프라인 매장 확인하기" />
+                    </a>
                 </div>
             </div>
         </div>
